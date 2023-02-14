@@ -1,0 +1,93 @@
+
+// Initial Bootstrap Imports
+@import '../../../node_modules/bootstrap/scss/functions.scss';
+@import '../../../node_modules/bootstrap/scss/variables.scss';
+@import '../../../node_modules/bootstrap/scss/mixins.scss';
+
+// Global Variables
+$color-primary: #511970;
+$color-secondary: #9f37d0;
+$color-background: #290f41;
+$color-text: #ffffff;
+
+// Bootstrap Overrides
+$theme-colors: (
+	primary: $color-primary,
+	secondary: $color-secondary
+);
+
+$list-group-active-bg: $color-secondary;
+$list-group-bg: $color-primary;
+$list-group-hover-bg: $color-secondary;
+$list-group-active-border-color: none;
+$list-group-border-color: none;
+$list-group-action-active-bg: $color-secondary;
+$list-group-color: $color-text;
+$list-group-active-color: $color-text;
+
+// Import full Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+html, body {
+	background-color: $color-background;
+	color: $color-text;
+	height: 100vh;
+}
+
+// Explicitly set text color in tables
+table,
+thead,
+tbody {
+	color: $color-text;
+}
+
+#login-prompt,
+#register-prompt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: $color-primary;
+	border-radius: 25px;
+	padding: 2rem;
+	text-align: center;
+}
+
+.loading-spinner {
+	color: $color-primary;
+}
+
+#space-list {
+	width: fit-content;
+	height: 100%;
+	background-color: $color-primary;
+	overflow: scroll;
+	float: left;
+	margin-right: 5px;
+}
+
+#space-list li {
+	padding: 0.5rem;
+}
+
+#space-list li:hover {
+	cursor: pointer;
+}
+
+// Server icon in space list
+.space-icon {
+	width: 3rem;
+	border-radius: 25px;
+}
+
+#channel-list {
+	width: fit-content;
+	float: left;
+	overflow: scroll;
+	height: 100%;
+	background-color: $color-primary;
+}
+
+#channel-list li:hover {
+	cursor: pointer;
+}

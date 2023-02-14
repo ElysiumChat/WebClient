@@ -1,0 +1,19 @@
+@import '../../../node_modules/bootstrap/scss/functions.scss';
+@import '../../../node_modules/bootstrap/scss/variables.scss';
+@import '../../../node_modules/bootstrap/scss/mixins.scss';
+
+$color-primary: #511970;
+$color-secondary: #9f37d0;
+$color-background: #ffffff;
+
+$theme-colors: (
+	primary: $color-primary,
+	secondary: $color-secondary
+);
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+	background-color: $color-background;
+	color: black;
+}
